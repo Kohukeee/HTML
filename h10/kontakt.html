@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harjutus 10 - Kontakt</title>
+</head>
+
+<body>
+
+<h1>ÕPILASE REGISTREERIMISVORM</h1>
+
+<ul>
+    <li><a href="isikuandmed.html">Isikuandmed</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
+    <li><a href="muu_info.html">Muu info</a></li>
+    <li><a href="noustumine.html">Nõustumine</a></li>
+</ul>
+
+<hr>
+
+<form action="#" method="post">
+
+<fieldset>
+
+<legend>Kontakt</legend>
+
+
+<p>
+
+<label for="email"><b>E-post</b></label><br>
+
+<input
+type="email"
+id="email"
+name="email"
+maxlength="100"
+placeholder="nt nimi@kool.ee"
+required>
+
+<br>
+
+(100 tähemärki; nõutud; placeholder: nt nimi@kool.ee)
+
+</p>
+
+
+<p>
+
+<label for="telefon"><b>Mobiiltelefon</b></label><br>
+
+<input
+type="tel"
+id="telefon"
+name="telefon"
+placeholder="+372 51234567"
+pattern="^\+372\s?\d{7,8}$"
+required>
+
+<br>
+
+(nõutav muster / pattern: ^\+372\s?\d{7,8}$)
+
+</p>
+
+
+<p>
+
+<label for="aadress"><b>Aadress</b></label><br>
+
+<textarea
+id="aadress"
+name="aadress"
+rows="3"
+cols="30"
+placeholder="Tänav, maja, korter">
+</textarea>
+
+</p>
+
+
+<p>
+
+<label for="linn"><b>Linn / asula</b></label><br>
+
+<input
+type="text"
+id="linn"
+name="linn"
+maxlength="30"
+placeholder="nt Tallinn"
+required>
+
+<br>
+
+(kuni 30 märki; nõutud; placeholder: nt Tallinn)
+
+</p>
+
+
+<p>
+
+<label for="postiindeks"><b>Postiindeks</b></label><br>
+
+<input
+type="text"
+id="postiindeks"
+name="postiindeks"
+placeholder="nt 10111"
+pattern="^\d{5}$"
+required>
+
+<br>
+
+(täpselt 5 numbrit; muster: ^\d{5}$)
+
+</p>
+
+
+<p>
+
+<label for="riik"><b>Riik</b></label><br>
+
+<input
+type="text"
+id="riik"
+name="riik"
+value="Eesti"
+readonly>
+
+<br>
+
+(muutmatu väli)
+
+</p>
+
+</fieldset>
+
+</form>
+
+<hr>
+
+&copy; 2026 | Henry Koplimaa |
+<a target="_blank" href="https://regamine.ee">Regamine.ee</a>
+
+</body>
+</html>
