@@ -1,59 +1,71 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ÕPILASE REGISTREERIMISVORM</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ÕPILASE REGISTREERIMISVORM</title>
 </head>
 <body>
 
-    <h1>ÕPILASE REGISTREERIMISVORM</h1>
+<h1>ÕPILASE REGISTREERIMISVORM</h1>
 
 <form action="#" method="post">
-  <fieldset>
-    <legend>Isikuandmed</legend><br>
-    <label for="Eesnimi">Eesnimi: </label><br>
-    <input id="Eesnimi" name="Eesnimi" type="text"><br><br>
-    <label for="Perekonnanimi">Perekonnanimi: </label><br>
-    <input id="Perekonnanimi" name="Perekonnanimi" type="text"><br><br>
-    <label for="date">Sünnikuupäev </label><br>
-    <input id="date" name="date" type="date" min="2025-01-01" max="2025-12-31"><br><br>
-    <label id="Sugu">Sugu </label><br>
-    <input type="radio" name="sugu" value="Naine"> Naine
-    <input type="radio" name="sugu" value="Mees" checked> Mees
-    <input type="radio" name="sugu" value="Muu" checked> Muu
-  </fieldset>
-</form>
+<fieldset>
+<legend>Isikuandmed</legend><br>
+<label for="Eesnimi">Eesnimi: </label><br>
+<input id="Eesnimi" name="Eesnimi" type="text" placeholder="nt Henry" required        maxlength="30"><br><br>
+<label for="Perekonnanimi">Perekonnanimi: </label><br>
+<input id="Perekonnanimi" name="Perekonnanimi" type="text" placeholder="nt Koplimaa" required maxlength="30"><br><br>
+<label for="date">Sünnikuupäev </label><br>
+<input id="date" name="date" type="date" min="2025-01-01" max="2025-12-31" value="1980-01-01" required><br><br>
+<label id="Sugu">Sugu </label><br>
+<input type="radio" name="sugu" value="Naine"> Naine
+<input type="radio" name="sugu" value="Mees" checked> Mees
+<input type="radio" name="sugu" value="Muu" checked> Muu
+</fieldset>
 
-<form action="#" method="post">
-  <fieldset>
-    <legend>Kontakt</legend><br>
-    <label for="email">E-Post: </label><br>
-    <input id="email" name="email" type="email" placeholder="nt Henry@kool.ee"><br><br>
-    <label for="tel">Telefon: </label><br>
-    <input id="tel" name="tel" type="tel" pattern="\+372[0-9]{7,8}" placeholder="+372 56555054"><br><br>
-    <label id="aadress">Aadress </label><br>
-    <textarea name="aadress" rows="4" cols="30" placeholder="Tänav, maja, korter"></textarea><br><br>
-    <label for="linn">Linn / asula </label><br>
-    <input id="linn" name="linn" type="text" placeholder="nt Tallinn"><br><br>
-    <label for="postiindeks">Postiindeks </label><br>
-    <input id="postiindeks" name="postiindeks" type="number" placeholder="nt 10101"><br><br>
-    <label for="riik">Riik </label><br>
-    <input id="riik" name="riik" type="text" placeholder="Eesti" disabled><br><br>
-  </fieldset>
-</form>
+<fieldset>
+<legend>Kontakt</legend><br>
+<label for="email">E-Post: </label><br>
+<input id="email" name="email" type="email" placeholder="nt Henry@kool.ee" required maxlength="100"><br><br>
+<label for="tel">Telefon: </label><br>
+<input id="tel" name="tel" type="tel" required pattern="^\+372\s?\d{7,8}$" placeholder="+372 56555054"><br><br>
+<label id="aadress">Aadress </label><br>
+<textarea name="aadress" rows="4" cols="30" placeholder="Tänav, maja, korter"></textarea><br><br>
+<label for="linn">Linn / asula </label><br>
+<input id="linn" name="linn" type="text" placeholder="nt Tallinn" required maxlength="30"><br><br>
+<label for="postiindeks">Postiindeks </label><br>
+<input id="postiindeks" name="postiindeks" type="text" required pattern="^\d{5}$" placeholder="nt 10101" title="Sisesta täpselt 5 numbrit"><br><br>
+<label for="riik">Riik </label><br>
+<input id="riik" name="riik" type="text" value="Eesti" disabled><br><br>
+</fieldset>
 
-<form action="#" method="post">
-  <fieldset>
-    <legend>Muu info</legend><br>
-    <label id="huvialad">Huvialad </label><br>
-    <input type="checkbox" name="Joonistamine"> Joonistamine
-    <input type="checkbox" name="Laulmine"> Laulmine
-    <input type="checkbox" name="Tantsimine"> Tantsimine
-    <input type="checkbox" name="Kokkamine"> Kokkamine <br><br>
-    <label for="Perekonnanimi">Perekonnanimi: </label><br>
-    <input id="Perekonnanimi" name="Perekonnanimi" type="text"><br><br>
-  </fieldset>
+<fieldset>
+<legend>Muu info</legend><br>
+<label id="huvialad">Huvialad </label><br>
+<input type="checkbox" name="Joonistamine"> Joonistamine
+<input type="checkbox" name="Laulmine"> Laulmine
+<input type="checkbox" name="Tantsimine"> Tantsimine
+<input type="checkbox" name="Kokkamine"> Kokkamine <br>
+<input type="checkbox" name="muu"> Muu
+<input id="muu" name="muu" type="text" placeholder="Täpsusta (kuni 30 märki)" maxlength="30"><br><br>
+<label id="veebileht">Isiklik veebileht </label><br>
+<input type="url" name="www" placeholder="https://hk.ee" pattern="https?://.*"><br><br>
+<label id="color">Eelistatud teemavärv </label><br>
+<input type="color" value="#1e5be0"><br><br>
+<label id="file">Dokumendid </label><br>
+<input type="file" accept=".jpg, .png, .pdf"><br><br>
+</fieldset>
+
+<fieldset>
+<legend>Nõustumine</legend><br>
+<input type="checkbox" name="kinnitus" required>
+<label id="kinnitus">Kinnitan, et sisestatud andmed on õiged ja luban nende töötlemist vastavalt kooli tingimustele. </label><br>  
+</fieldset>
+
+
+<button type="submit">Saada</button>
+<button type="reset">Tühjenda</button>
 </form>
 
 </body>
